@@ -1,0 +1,50 @@
+[
+  {
+    "titulo":"Harry Potter y la piedra filosofal",
+    "autor":"J. K. Rowling",
+    "isbn":"9788498382662",
+    "stockTotal":10,
+    "stockDisponible":10,
+    "lugarBiblioteca":"Pasillo A Repisa C",
+    "numPaginas": 264,
+    "anioPublicacion":"2001",
+    "sinopsis": "El día de su cumpleaños, Harry Potter descubre que es hijo de dos conocidos hechiceros, de los que ha heredado poderes mágicos. Debe asistir a una famosa escuela de magia y hechicería, donde entabla una amistad con dos jóvenes que se convertirán en sus compañeros de aventura. Durante su primer año en Hogwarts, descubre que un malévolo y poderoso mago llamado Voldemort está en busca de una piedra filosofal que alarga la vida de quien la posee.",
+    "genero":"Literatura infantil, Literatura fantástica, Alta fantasía"
+  },
+  {
+    "titulo":"El gran Gatsby",
+    "autor":"F. Scott Fitzgerald",
+    "isbn":"9788497936606",
+    "stockTotal":10,
+    "stockDisponible":10,
+    "lugarBiblioteca":"Pasillo B Repisa A",
+    "numPaginas": 192,
+    "anioPublicacion":"2008",
+    "sinopsis": "Jay Gatsby, el caballero que reina sobre West Egg, el anfitrión de las noches sin tregua, pero también el triunfador marcado por el trágico sino de una soledad no pretendida, es el arquetipo de esos años veinte que se iniciaron con la Prohibición y discurrieron en el gangsterismo y la corrupción política organizada. Protagonista de una década que culminaría con la catástrofe de 1929, su imagen de esplendor no hace sino anunciar un drama inevitable.",
+    "genero":"Novela, Tragedia, Ficción literaria"
+  },
+  {
+    "titulo":"Don Quijote de la Mancha",
+    "autor":"Miguel de Cervantes",
+    "isbn":"9788493806125",
+    "stockTotal":10,
+    "stockDisponible":10,
+    "lugarBiblioteca":"Pasillo C Repisa F",
+    "numPaginas": 980,
+    "anioPublicacion":"2014",
+    "sinopsis": "El ingenioso hidalgo don Quijote de la Mancha narra las aventuras de Alonso Quijano, un hidalgo pobre que de tanto leer novelas de caballería acaba enloqueciendo y creyendo ser un caballero andante, nombrándose a sí mismo como don Quijote de la Mancha.",
+    "genero":"Novela, Parodia, Sátira, Novela picaresca, Farsa, Ficción de aventuras"
+  },
+  {
+    "titulo":"Hamlet",
+    "autor":"William Shakespeare",
+    "isbn":"9788467033380",
+    "stockTotal":10,
+    "stockDisponible":10,
+    "lugarBiblioteca":"Pasillo B Repisa C",
+    "numPaginas": 320,
+    "anioPublicacion":"2010",
+    "sinopsis": "La tragedia de Hamlet, Príncipe de Dinamarca cuenta la historia del joven heredero al trono danés, cuyo padre muerto se le aparece como un fantasma en las murallas del castillo, para invocar su venganza, ya que su muerte no fue natural sino que fue envenenado por su propia esposa Gertrudis, madre de Hamlet, y su hermano y actual rey, Claudio.",
+    "genero":"Drama, Tragedia"
+  }
+  ]
