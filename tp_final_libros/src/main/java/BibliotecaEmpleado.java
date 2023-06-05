@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class BibliotecaEmpleado{
-    private int algo;
+    private int o;
 }
 
 /*
@@ -14,5 +14,5 @@ public class BibliotecaEmpleado extends Biblioteca{
         this.clientes = clientes;
         this.alquileres = alquileres;
     }
-    */
-}
+
+}*/
