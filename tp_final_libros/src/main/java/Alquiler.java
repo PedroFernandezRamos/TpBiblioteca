@@ -6,7 +6,7 @@ public class Alquiler {
     private String nombre;
     private String isbn;
 
-    ///CONSTRUCTOR,GETTERS,SETTERS ...
+    ///CONSTRUCTOR,GETTERS,SETTERS
 
     public Alquiler(LocalDate fechaDeRetiro, LocalDate fechaDeDevolucion, boolean estado) {
         this.fechaDeRetiro = fechaDeRetiro;
