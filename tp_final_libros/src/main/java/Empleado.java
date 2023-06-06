@@ -1,19 +1,29 @@
 public class Empleado extends Persona{
-    private int id;
+    private String email;
+    private String contrasena;
 
-    public Empleado(String nombre, String telefono, String direccion, int id) {
-        super(nombre, telefono, direccion);
-        this.id = id;
+    public Empleado(String nombre, String telefono, String direccion, Integer dni, String email, String contrasena) {
+        super(nombre, telefono, direccion, dni);
+        this.email = email;
+        this.contrasena = contrasena;
     }
 
-    public int getId() {
-        return id;
+    public String getEmail() {
+        return email;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void cambiarContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     @Override
     public String toString() {
         return "\n     Empleado:" + super.toString() +
-                "Id: " + id +
+                "Email: " + email +
                 "\n";
     }
 }
