@@ -1,4 +1,9 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BibliotecaEmpleado extends Biblioteca{
     private ArrayList<Cliente> clientes;
@@ -28,8 +33,15 @@ public class BibliotecaEmpleado extends Biblioteca{
     }
 
     private void cargarClientes(){
-        /// json de clientes
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                Cliente[] arrayClientes = objectMapper.readValue(new File("src/main/resources/clientes.json"), Cliente[].class);
+                clientes = new ArrayList<>(Arrays.asList(arrayClientes));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
-}
+
 
 

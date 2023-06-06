@@ -1,0 +1,23 @@
+[
+  {
+    "nombre":"Carlos Sanchez",
+    "telefono":"22388432392",
+    "direccion":"Jara 2932",
+    "dni":38445032,
+    "listaAlquileresActuales":["El gran Gatsby"]
+  },
+  {
+    "nombre":"Roberto Torres",
+    "telefono":"2236382932",
+    "direccion":"Libertad 8293",
+    "dni":26445367,
+    "listaAlquileresActuales":["Don Quijote de la Mancha","Hamlet"]
+  },
+  {
+    "nombre":"Ana Perez",
+    "telefono":"2237389937",
+    "direccion":"Gutierrez 7392",
+    "dni":40728356,
+    "listaAlquileresActuales":[]
+  }
+]
