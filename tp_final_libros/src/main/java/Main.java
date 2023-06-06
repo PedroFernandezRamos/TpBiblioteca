@@ -17,25 +17,7 @@ public class Main {
 
     public static void getLibros()
     {
-        ObjectMapper objectMapper = new ObjectMapper();
 
-        try {
-            // Lee el JSON desde un archivo
-            Libro[] libros = objectMapper.readValue(new File("src/main/resources/libro.json"), Libro[].class);
-
-            // Accede a los objetos Libro (mostrar)
-            for (Libro libro : libros) {
-                System.out.println("Titulo: " + libro.getTitulo());
-                System.out.println("Autor: " + libro.getAutor());
-                System.out.println("ISBN: " + libro.getIsbn());
-                System.out.println("Stock total: " + libro.getStockTotal());
-                System.out.println("Stock disponible: " + libro.getStockDisponible());
-                System.out.println("Lugar en la biblioteca: " + libro.getLugarBiblioteca());
-                System.out.println();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void getLibrosCliente()

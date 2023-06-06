@@ -7,6 +7,8 @@ public class BibliotecaCliente extends Biblioteca{
     public void menu() {
     }
 
-    private void cargarLibros(){
-    };
+    @Override
+    public void cargarLibros() {
+        super.cargarLibros();
+    }
 }
