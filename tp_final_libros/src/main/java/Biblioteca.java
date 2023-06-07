@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public abstract class Biblioteca {
-    protected ArrayList<Libro> libros;
+    protected ArrayList<Libro> libros = new ArrayList<>();
 
     public Biblioteca(){}
 

@@ -6,21 +6,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BibliotecaEmpleado extends Biblioteca{
-    private ArrayList<Cliente> clientes;
-    private ArrayList<Alquiler> alquileres;
+    private ArrayList<Cliente> clientes = new ArrayList<>();
+    private ArrayList<Alquiler> alquileres = new ArrayList<>();
 
     public BibliotecaEmpleado(){
         this.cargarLibros();
-        this.cargarAlquileres();
-        this.cargarClientes();
-    };                              ///CONSTRUCTORES VACIOS PORQUE CREO QUE ES MEJOR QUE UNA VEZ QUE SE INSTANCIE LA BIBLIOTECA
-                                    ///EN EL MAIN Y SE LLAME AL METODO MENU LOS ARCHIVOS SE DESPERCISTAN RECIEN EN ESE METODO
+        ///this.cargarAlquileres();
+        ///this.cargarClientes();
+    };
 
     @Override
     public void menu() {
-        System.out.println("Bienvenido!");
-        System.out.println("1. ");
-
+        System.out.println("Seleccione Una Opcion:");
+        System.out.println("1. Alquiler");
+        System.out.println("2. Devolucion");
+        System.out.println("3. Cargar nuevo Libro");
+        System.out.println("4. Cargar nuevo cliente");
+        System.out.println("5. Ver informacion de un cliente");
     }
 
     @Override

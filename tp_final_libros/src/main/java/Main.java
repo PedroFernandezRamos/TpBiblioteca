@@ -6,20 +6,39 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        getLibros();
-        //getLibrosCliente();
-
+        int opcion = -1;
+        System.out.println("Bienvenido!");
+        System.out.println("Seleccione una opcion:");
+        System.out.println("1. Modo Empleado");
+        System.out.println("2. Modo Cliente");
+        System.out.println("0. Salir del programa");
+        Scanner sc = new Scanner(System.in);
+        do{
+            opcion = sc.nextInt();
+            switch (opcion) {
+                case (0):
+                    return;
+                case (1):
+                    BibliotecaEmpleado bibliotecaEmpleado = new BibliotecaEmpleado();
+                    bibliotecaEmpleado.menu();
+                    break;
+                case (2):
+                    BibliotecaCliente bibliotecaCliente = new BibliotecaCliente();
+                    bibliotecaCliente.menu();
+                    break;
+                default:
+                    System.out.println("Opcion no valida, vuelva a ingresarla");
+                    break;
+            }
+        }while (opcion < 0 || opcion > 2);
     }
 
-    public static void getLibros()
-    {
 
-    }
-
-    public static void getLibrosCliente()
+    /*public static void getLibrosCliente()
     {
         ObjectMapper objectMapper = new ObjectMapper();
 
@@ -42,8 +61,8 @@ public class Main {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-
+        }*/
 }
+
+
+
