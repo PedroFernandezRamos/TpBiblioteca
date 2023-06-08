@@ -1,42 +1,87 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         int opcion = -1;
+        boolean flag;
         System.out.println("Bienvenido!");
-        System.out.println("Seleccione una opcion:");
-        System.out.println("1. Modo Empleado");
-        System.out.println("2. Modo Cliente");
-        System.out.println("0. Salir del programa");
-        Scanner sc = new Scanner(System.in);
-        do{
-            opcion = sc.nextInt();
-            switch (opcion) {
-                case (0):
-                    return;
-                case (1):
-                    BibliotecaEmpleado bibliotecaEmpleado = new BibliotecaEmpleado();
-                    bibliotecaEmpleado.menu();
-                    break;
-                case (2):
-                    BibliotecaCliente bibliotecaCliente = new BibliotecaCliente();
-                    bibliotecaCliente.menu();
-                    break;
-                default:
-                    System.out.println("Opcion no valida, vuelva a ingresarla");
-                    break;
-            }
-        }while (opcion < 0 || opcion > 2);
+        do {
+            flag = true;
+            System.out.println("Seleccione una opcion:");
+            System.out.println("1. Modo Empleado");
+            System.out.println("2. Modo Cliente");
+            System.out.println("0. Salir del programa");
+            Scanner sc = new Scanner(System.in);
+            do {
+                opcion = sc.nextInt();
+                switch (opcion) {
+                    case (0):
+                        return;
+                    case (1):
+                        if(ingresoPorEmail()){
+                            BibliotecaEmpleado bibliotecaEmpleado = new BibliotecaEmpleado();
+                            bibliotecaEmpleado.menu();
+                        }else{
+                            flag = false;       ///cuando el ingreso por mail es erroneo vuelve a mostrar el menu general
+                        }
+                        break;
+                    case (2):
+                        BibliotecaCliente bibliotecaCliente = new BibliotecaCliente();
+                        bibliotecaCliente.menu();
+                        break;
+                    default:
+                        System.out.println("Opcion no valida, vuelva a ingresarla");
+                        break;
+                }
+            } while (opcion < 0 || opcion > 2);
+        }while (flag != false);
     }
 
+    public static boolean buscaEmpleadoEnJson(String email, String contrasena){
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            Empleado [] arrayEmpleados = objectMapper.readValue(new File("src/main/resources/empleados.json"),Empleado[].class);
+
+            for (Empleado empleado : arrayEmpleados){
+                if(email.equals(empleado.getEmail()) && contrasena.equals(empleado.getContrasena())){
+                    return true;
+                }
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+public static boolean ingresoPorEmail(){
+    String email, contrasena;
+    Scanner scanner = new Scanner(System.in);
+    int opcion;
+    do {
+        opcion = 0;
+        try {
+            System.out.println("Ingrese tu email:");
+            email = scanner.nextLine();
+            System.out.println("Ingrese tu contraseña:");
+            contrasena = scanner.nextLine();
+            if (buscaEmpleadoEnJson(email, contrasena)) {
+                return true;
+            } else {
+                System.out.println("Email o contraseña erronea.");
+                System.out.println("Ingrese 1 si desea volver a intentar, sino volverás al menu general");
+                opcion = scanner.nextInt();
+            }
+        }catch (InputMismatchException e) {
+            e.printStackTrace();
+        }
+    }while (opcion != 1);
+
+        return false;
+}
 
     /*public static void getLibrosCliente()
     {

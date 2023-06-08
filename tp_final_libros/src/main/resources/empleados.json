@@ -1,0 +1,18 @@
+[
+  {
+    "nombre":"Gonzalo Castro",
+    "telefono":"2232537649",
+    "direccion":"Rivadavia 3728",
+    "dni":27346974,
+    "email":"gonzalocastro@gmail.com",
+    "contrasena":"gonzaCastro19"
+  },
+  {
+    "nombre":"Maria Cisneros",
+    "telefono":"2237728394",
+    "direccion":"Corrientes 1821",
+    "dni":40243712,
+    "email":"mariacisneros@gmail.com",
+    "contrasena":"mariaCisneros2000"
+  }
+]
