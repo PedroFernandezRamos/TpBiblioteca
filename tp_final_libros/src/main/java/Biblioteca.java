@@ -11,7 +11,7 @@ public abstract class Biblioteca implements Menu{
     public Biblioteca(){}
 
 
-    protected void cargarLibros(){
+    protected void leerLibros(){        //Al ser protected no hace falta hacer un override en las clases hijas
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {

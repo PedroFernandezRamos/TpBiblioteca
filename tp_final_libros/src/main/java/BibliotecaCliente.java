@@ -15,8 +15,5 @@ public class BibliotecaCliente extends Biblioteca{
         }while(continuar != 0);
     }
 
-    @Override
-    public void cargarLibros() {
-        super.cargarLibros();
-    }
+
 }

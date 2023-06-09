@@ -8,10 +8,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Main {
     public static void main(String[] args) {
         int opcion = -1;
-        boolean flag;
+        boolean flag = true;
         System.out.println("Bienvenido!");
         do {
-            flag = true;
             System.out.println("Seleccione una opcion:");
             System.out.println("1. Modo Empleado");
             System.out.println("2. Modo Cliente");
@@ -21,13 +20,12 @@ public class Main {
                 opcion = sc.nextInt();
                 switch (opcion) {
                     case (0):
+                        flag = false;
                         return;
                     case (1):
                         if(ingresoPorEmail()){
                             BibliotecaEmpleado bibliotecaEmpleado = new BibliotecaEmpleado();
                             bibliotecaEmpleado.menu();
-                        }else{
-                            flag = false;       ///cuando el ingreso por mail es erroneo vuelve a mostrar el menu general
                         }
                         break;
                     case (2):
