@@ -1,50 +1,144 @@
-[
-  {
-    "titulo":"Harry Potter y la piedra filosofal",
-    "autor":"J. K. Rowling",
-    "isbn":"9788498382662",
-    "stockTotal":10,
-    "stockDisponible":10,
-    "lugarBiblioteca":"Pasillo A Repisa C",
-    "numPaginas": 264,
-    "anioPublicacion":"2001",
-    "sinopsis": "El día de su cumpleaños, Harry Potter descubre que es hijo de dos conocidos hechiceros, de los que ha heredado poderes mágicos. Debe asistir a una famosa escuela de magia y hechicería, donde entabla una amistad con dos jóvenes que se convertirán en sus compañeros de aventura. Durante su primer año en Hogwarts, descubre que un malévolo y poderoso mago llamado Voldemort está en busca de una piedra filosofal que alarga la vida de quien la posee.",
-    "genero":"Literatura infantil, Literatura fantástica, Alta fantasía"
-  },
-  {
-    "titulo":"El gran Gatsby",
-    "autor":"F. Scott Fitzgerald",
-    "isbn":"9788497936606",
-    "stockTotal":10,
-    "stockDisponible":10,
-    "lugarBiblioteca":"Pasillo B Repisa A",
-    "numPaginas": 192,
-    "anioPublicacion":"2008",
-    "sinopsis": "Jay Gatsby, el caballero que reina sobre West Egg, el anfitrión de las noches sin tregua, pero también el triunfador marcado por el trágico sino de una soledad no pretendida, es el arquetipo de esos años veinte que se iniciaron con la Prohibición y discurrieron en el gangsterismo y la corrupción política organizada. Protagonista de una década que culminaría con la catástrofe de 1929, su imagen de esplendor no hace sino anunciar un drama inevitable.",
-    "genero":"Novela, Tragedia, Ficción literaria"
-  },
-  {
-    "titulo":"Don Quijote de la Mancha",
-    "autor":"Miguel de Cervantes",
-    "isbn":"9788493806125",
-    "stockTotal":10,
-    "stockDisponible":10,
-    "lugarBiblioteca":"Pasillo C Repisa F",
-    "numPaginas": 980,
-    "anioPublicacion":"2014",
-    "sinopsis": "El ingenioso hidalgo don Quijote de la Mancha narra las aventuras de Alonso Quijano, un hidalgo pobre que de tanto leer novelas de caballería acaba enloqueciendo y creyendo ser un caballero andante, nombrándose a sí mismo como don Quijote de la Mancha.",
-    "genero":"Novela, Parodia, Sátira, Novela picaresca, Farsa, Ficción de aventuras"
-  },
-  {
-    "titulo":"Hamlet",
-    "autor":"William Shakespeare",
-    "isbn":"9788467033380",
-    "stockTotal":10,
-    "stockDisponible":10,
-    "lugarBiblioteca":"Pasillo B Repisa C",
-    "numPaginas": 320,
-    "anioPublicacion":"2010",
-    "sinopsis": "La tragedia de Hamlet, Príncipe de Dinamarca cuenta la historia del joven heredero al trono danés, cuyo padre muerto se le aparece como un fantasma en las murallas del castillo, para invocar su venganza, ya que su muerte no fue natural sino que fue envenenado por su propia esposa Gertrudis, madre de Hamlet, y su hermano y actual rey, Claudio.",
-    "genero":"Drama, Tragedia"
-  }
-  ]
+[ {
+  "titulo" : "Harry Potter and the philosopher's stone",
+  "autor" : "[J. K. Rowling]",
+  "isbn" : 9788498382662,
+  "stockTotal" : 15,
+  "stockDisponible" : 15,
+  "genero" : "[Juvenile Fiction]",
+  "numPaginas" : 254,
+  "anioPublicacion" : "2010",
+  "sinopsis" : "Harry Potter se ha quedado huérfano y vive en casa de sus abominables tíos y del insoportable primo Dudley. Harry se siente muy triste y solo, hasta que un buen día recibe una carta que cambiará su vida para siempre. En ella le comunican que ha sido aceptado como alumno en el colegio interno Hogwarts de magia y hechicería. A partir de ese momento, la suerte de Harry da un vuelco espectacular. En esa escuela tan especial aprenderá encantamientos, trucos fabulosos y tácticas de defensa contra las malas artes. Se convertirá en el campeón escolar de quidditch, especie de fútbol aéreo que se juega montado sobre escobas, y se hará un puñado de buenos amigos... aunque también algunos temibles enemigos. Pero sobre todo, conocerá los secretos que le permitirán cumplir con su destino. Pues, aunque no lo parezca a primera vista, Harry no es un chico común y corriente. ¡Es un verdadero mago! (Source : 4e de couverture)",
+  "lugarBiblioteca" : "Pasillo E repisa a"
+}, {
+  "titulo" : "El Gran Gatsby",
+  "autor" : "[F. Scott. Fitzgerald]",
+  "isbn" : 9788726342635,
+  "stockTotal" : 8,
+  "stockDisponible" : 8,
+  "genero" : "[Fiction]",
+  "numPaginas" : 366,
+  "anioPublicacion" : "2020-10-05",
+  "sinopsis" : "La decadencia, idealismo y el exceso de la sociedad Americana serán observados desde la perspectiva de Nick Carraway, un joven criado en el medio oeste y recién llegado a la gran Manzana. Considerada como la obra maestra de F. Scott Fitzgerald, Carraway tendrá la oportunidad de vivir el sueño Americano junto a su vecino, el gran Gatsby. Interpretado por Leonardo Di Caprio en la versión cinematográfica del 2013, Gatsby introducirá a Nick en una burbuja social de lujos, derroche e increíbles fiestas en su mansión en Long Island. Anímate a escuchar esta historia donde la violencia, la desigualdad social, el amor y el derroche expondrán una crítica social al consumismo y el sueño Americano en la Nueva York de 1920. F. Scott Fitzgerald fue un novelista y actor Americano mundialmente reconocido por novelas como El gran Gatsby, A este lado del paraiso y The last tycoon. El escritor nacido en Minnesota es considerado como uno de los mejores artistas norteamericanos del siglo XX. Casado con Zelda Fitzgerald fueron expatriados a Paris, lugar en donde su fama creció gracias a su amor a la escritura, el arte y el Jazz.",
+  "lugarBiblioteca" : "Pasillo F "
+}, {
+  "titulo" : "Hamlet (edición bilingüe) (Los mejores clásicos)",
+  "autor" : "[William Shakespeare]",
+  "isbn" : 9788491051114,
+  "stockTotal" : 10,
+  "stockDisponible" : 10,
+  "genero" : "[Drama]",
+  "numPaginas" : 320,
+  "anioPublicacion" : "2015-06-04",
+  "sinopsis" : "Los mejores libros jamás escritos «En este instante yo podría beber sangre caliente, y hacer cosas tan amargas, que el día temblaría de verlas.» En una gélida noche, tan funesta que el viento se vuelve mensajero de terribles presagios, Hamlet, Horacio y tres soldados se reúnen con el propósito de desentrañar el misterio en torno al espectro que ha aparecido en las últimas noches cerca del castillo. Solo hablará con Hamlet, pues esa criatura castigada a vagar por las tierras de Elsinor fue su padre, el último rey de Dinamarca. Su hermano Claudio le traicionó arrebatándole la vida, el trono y su reina. Un horrible crimen que reclama justicia. Frente al magnífico texto original presentamos la versión de Tomás Segovia, una de las más apreciadas en español. Asimismo, cuenta con una introducción a cargo de Alan Sinfield, catedrático emérito de literatura inglesa de la Universidad de Sussex. Edición bilingüe. Versión de Tomás Segovia.",
+  "lugarBiblioteca" : "Pasillo R"
+}, {
+  "titulo" : "El Principito",
+  "autor" : "[Antoine De Saint-Exupéry]",
+  "isbn" : 9781507170656,
+  "stockTotal" : 15,
+  "stockDisponible" : 15,
+  "genero" : "[Young Adult Fiction]",
+  "numPaginas" : 114,
+  "anioPublicacion" : "2021-01-01",
+  "sinopsis" : "Clásico de la literatura que cuenta la historia de un aviador perdido en el desierto, quien encuentra a un pequeño príncipe con el que inicia una larga conversación. El Principito le cuenta su paso por diferentes planetas.",
+  "lugarBiblioteca" : "Pasillo C"
+}, {
+  "titulo" : "Macbeth",
+  "autor" : "[William Shakespeare]",
+  "isbn" : 9791259710765,
+  "stockTotal" : 16,
+  "stockDisponible" : 16,
+  "genero" : "[Fiction]",
+  "numPaginas" : 0,
+  "anioPublicacion" : "2021-01-25",
+  "sinopsis" : "«Macbeth» (o la «decisión temida de Scott») es sin duda conocida por casi cualquier persona que se haya graduado de la escuela secundaria. En la oscura tragedia de William Shakespeare, Macbeth cede ante su propia «ambición de salto». Al hacerlo, comete regicidio, entre otros pecados, solo para ser derrocado (como dijo el rey Enrique, «¡Inquieta miente la cabeza que lleva una corona»!). En este drama de cinco actos, encontramos que la superstición juega un papel importante (las brujas juegan grandes influencias en las ambiciones de Macbeth y su esposa). Shakespeare también pasa tiempo cortejando a su público isabelino con la historia de fantasmas del día. En última instancia, «Birnam Wood marcha hacia High Dunsinane» y Macbeth se da cuenta de que lo ha perdido todo, y «mañana y mañana y mañana» se arrastran en su pequeño ritmo y se hace justicia.",
+  "lugarBiblioteca" : "Pasillo E"
+}, {
+  "titulo" : "Harry Potter y la cámara secreta",
+  "autor" : "[J. K. Rowling]",
+  "isbn" : 9788478884957,
+  "stockTotal" : 12,
+  "stockDisponible" : 12,
+  "genero" : "[Brujos]",
+  "numPaginas" : 288,
+  "anioPublicacion" : "1999",
+  "sinopsis" : "Tras derrotar una vez más a lord Voldemort, su siniestro enemigo en Harry Potter y la piedra filosofal, Harry espera impaciente en casa de sus insoportables tíos el inicio del segundo curso del Colegio Hogwarts de Magia y Hechicería. Sin embargo, la espera dura poco, pues un elfo aparece en su habitación y le advierte que una amenaza mortal se cierne sobre la escuela. Así pues, Harry no se lo piensa dos veces y, acompañado de Ron, su mejor amigo, se dirige a Hogwarts en un coche volador. Pero ¿puede un aprendiz de mago defender la escuela de los malvados que pretenden destruirla? Sin saber que alguien ha abierto la Cámara de los Secretos, dejando escapar una serie de monstruos peligrosos, Harry y sus amigos Ron y Hermione tendrán que enfrentarse con arañas gigantes, serpientes encantadas, fantasmas enfurecidos y, sobre todo, con la mismísima reencarnación de su más temible adversario.",
+  "lugarBiblioteca" : "Pasillo C"
+}, {
+  "titulo" : "El gaucho Martín Fierro",
+  "autor" : "[José Hernández]",
+  "isbn" : 9788726602784,
+  "stockTotal" : 15,
+  "stockDisponible" : 15,
+  "genero" : "[Poetry]",
+  "numPaginas" : 306,
+  "anioPublicacion" : "2022-10-07",
+  "sinopsis" : "El Martín Fierro es un largo poema narrativo que inauguró un género literario –la gauchesca– y dejó una huella profundísima en la cultura argentina. En esta primera parte (conocida también como \"La ida\") Fierro cuenta cómo lo obligaron a abandonar a su familia para servir en el ejército y combatir contra los aborígenes. Cubre ese tiempo en los fortines de la frontera y lo que lo lleva a desertar. Y cuenta, principalmente, cómo fueron los años de su vida fuera de la ley: las tensiones sociales fuertes y cambiantes, la amistad, los cruces infaustos, la libertad boca arriba en las noches estrelladas, la posibilidad de una nueva fuga. José Hernández (Charcas de Pedriel, 1834 - Buenos Aires, 1886) fue un escritor, militar y periodista nacido en la Argentina. Su poema Martín Fierro, compuesto por El gaucho Martín Fierro (1872) y La vuelta de Martín Fierro (1879), lo convirtió en una de las principales plumas sudamericanas de la segunda mitad del siglo XIX. Se opuso al poder centralizado en la capital y escribió multitud de artículos a favor del federalismo. También colaboró en distintas obras del Estado argentino en consolidación.",
+  "lugarBiblioteca" : "Pasillo E"
+}, {
+  "titulo" : "El Señor de Los Anillos, I",
+  "autor" : "J. R. R. Tolkien",
+  "isbn" : 9788445073728,
+  "stockTotal" : 13,
+  "stockDisponible" : 13,
+  "genero" : "Fiction",
+  "numPaginas" : 488,
+  "anioPublicacion" : "2002",
+  "sinopsis" : "En la adormecida e idílica Comarca, un joven hobbit recibe un encargo: custodiar el Anillo Único y emprender el viaje para su destrucción en las Grietas del Destino. Acompañado por magos, hombres, elfos y enanos, atravesará la Tierra Media y se internará en las sombras de Mordor, perseguido siempre por las huestes de Sauron, el Señor Oscuro, dispuesto a recuperar su creación para establecer el dominio definitivo del Mal.",
+  "lugarBiblioteca" : "Pasillo E repisa F"
+}, {
+  "titulo" : "Don Quijote de la Mancha",
+  "autor" : "Miguel de Cervantes Saavedra",
+  "isbn" : 9788026807254,
+  "stockTotal" : 8,
+  "stockDisponible" : 8,
+  "genero" : "Fiction",
+  "numPaginas" : 1064,
+  "anioPublicacion" : "2014-03-24",
+  "sinopsis" : "Don Quijote de la Mancha es una novela escrita por Miguel de Cervantes Saavedra. Consiste en dos partes que se publicaron en 1605 y 1615. La obra cuenta las aventuras del viaje de un caballero viejo que piensa ser un caballero andante.Despues de volverse loco por haber leido demasiados libros de caballeria, deja deja su casa en busca de aventuras en las carreteras y en el paisaje rural de la españa imperial. La primera parte de la novela lleva a Don Quijote de su pequeño pueblo de la mancha a los bosques de la sierra morena y de vuelta a su pueblo donde se recupera del cansancioy varias heridas. Sus encuentros con otros personajes suelen ser en ventas las cuales, en su locura, toma por castillos.Su meta es de enderezar toda la clase de males y de hacerse famoso por sus buenas acciones.Don Quijote se encuentra con una gran variedad de personajes, desde campesinos hasta nobles, desde criminales hasta curas,desde prostitutas y locos enamorados y hasta mujeres agraviadas y hombres celosos. Miguel de Cervantes (1547-1616) encarnó el ideal de la unión entre armas y letras, escribió a caballo entre Renacimiento y Barroco. Sus poesías, comedias, tragedias y entremeses quizá se ven ensombrecidos por su narrativa, donde fulguran las Novelas ejemplares, las dos partes del Quijote y la que él consideró su mejor obra, Los trabajos de Persiles y Sigismunda.",
+  "lugarBiblioteca" : "Pasillo A repisa E"
+}, {
+  "titulo" : "Historia de dos ciudades",
+  "autor" : "Charles Dickens",
+  "isbn" : 9788437619538,
+  "stockTotal" : 14,
+  "stockDisponible" : 14,
+  "genero" : "Fiction",
+  "numPaginas" : 508,
+  "anioPublicacion" : "2004",
+  "sinopsis" : "Charles Dickens es sin duda el más famoso novelista victoriano, y probablemente el que más ha contribuido a crear una imagen de la época incluso en quienes no lo han leído. El escritor mantuvo una postura crítica ante las instituciones más representativas del victorianismo, desde el Parlamento al sistema educativo, desde las teorías económicas del utilitarismo al funcionamiento de la justicia, la administración, la sanidad pública y los asilos para indigentes. Dickens es, sobre todo, una de las mayores imaginaciones creadoras en lengua inglesa. «Historia de dos ciudades» es una de las novelas más conocidas de Dickens. La historia transcurre entre dos ciudades, Londres y París, durante la época de la Revolución Francesa. La indiferencia de Dickens por la política y su desprecio por los políticos alejan la novela de cualquier debate político o filosófico sobre la revolución. Sin embargo, al suprimir dichos debates en torno a los acontecimientos revolucionarios, Dickens otorga a las masas populares francesas un protagonismo, autonomía y actividad histórica que no tuvieron, presentando además la revolución como justo castigo a la aristocracia por los siglos de explotación y maltrato del pueblo.",
+  "lugarBiblioteca" : "Pasillo A"
+}, {
+  "titulo" : "Harry Potter y el prisionero de Azkaban",
+  "autor" : "J. K. Rowling",
+  "isbn" : 9788498380194,
+  "stockTotal" : 10,
+  "stockDisponible" : 10,
+  "genero" : "England",
+  "numPaginas" : 350,
+  "anioPublicacion" : "2006",
+  "sinopsis" : "During his third year at Hogwarts School for Witchcraft and Wizardry, Harry Potter must confront the devious and dangerous wizard responsible for his parents' deaths.",
+  "lugarBiblioteca" : "Paseilo E repisa A"
+}, {
+  "titulo" : "Las aventuras de sherlock holmes",
+  "autor" : "Conan Doyle",
+  "isbn" : 9788492635276,
+  "stockTotal" : 6,
+  "stockDisponible" : 6,
+  "genero" : "No disponible",
+  "numPaginas" : 0,
+  "anioPublicacion" : "2011-11",
+  "sinopsis" : "Sherlock Holmes, personaje ficticio creado en el año 1887 por Sir Arthur Conan Doyle, es un \"detective asesor\" del Londres de finales del siglo XIX que destaca por su inteligencia y hábil uso de la observación y el razonamiento deductivo para resolver casos difíciles. Es el prototipo de investigador cerebral por excelencia e influyó en gran medida en la ficción detectivesca posterior a su aparición. Es es el creador de su propia profesión, \"detective consultor\", que consiste en ayudar a aclarar los casos que presentan dificultades superiores a las habilidades que poseen los detectives oficiales (de Scotland Yard) o detectives particulares, como es el caso de los detectives Lestrade, Gregson, Hopkins y otros tantos que se quedan con el éxito de la resolución del crimen.",
+  "lugarBiblioteca" : "Paillo R"
+}, {
+  "titulo" : "Veinte mil leguas de viaje submarino",
+  "autor" : "Jules Verne",
+  "isbn" : 9789583006821,
+  "stockTotal" : 9,
+  "stockDisponible" : 9,
+  "genero" : "Submarines (Ships)",
+  "numPaginas" : 0,
+  "anioPublicacion" : "2000-02",
+  "sinopsis" : "No disponible",
+  "lugarBiblioteca" : "Pasillo F"
+} ]

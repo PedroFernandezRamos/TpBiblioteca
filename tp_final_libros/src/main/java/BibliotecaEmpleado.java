@@ -49,6 +49,7 @@ public class BibliotecaEmpleado extends Biblioteca{
                         break;
                     case (3):
                         //funcion cargar nuevo libro
+                        GoogleBooksAPI.gestionApiBooks();
                         break;
                     case (4):
                         cargarCliente();
