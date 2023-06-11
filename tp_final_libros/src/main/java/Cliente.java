@@ -69,4 +69,7 @@ public class Cliente extends Persona{
                 "\n ";
     }
 
+    public List<String> getListaAlquileresActuales() {
+        return listaAlquileresActuales;
+    }
 }

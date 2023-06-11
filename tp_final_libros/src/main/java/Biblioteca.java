@@ -11,23 +11,14 @@ public abstract class Biblioteca implements Menu{
     public Biblioteca(){}
 
 
-    protected void leerLibros(){        //Al ser protected no hace falta hacer un override en las clases hijas
+    protected void leerJsonLibros(){        //Al ser protected no hace falta hacer un override en las clases hijas
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {
             // Lee el JSON desde un archivo
             Libro[] librosArray = objectMapper.readValue(new File("src/main/resources/libro.json"), Libro[].class);
+            /// Transforma el array que lee en un Arraylist
             libros.addAll(Arrays.asList(librosArray));
-            // Accede a los objetos Libro (mostrar)
-            /*for (Libro libro : libros) {
-                System.out.println("Titulo: " + libro.getTitulo());
-                System.out.println("Autor: " + libro.getAutor());
-                System.out.println("ISBN: " + libro.getIsbn());
-                System.out.println("Stock total: " + libro.getStockTotal());
-                System.out.println("Stock disponible: " + libro.getStockDisponible());
-                System.out.println("Lugar en la biblioteca: " + libro.getLugarBiblioteca());
-                System.out.println();
-            }*/
         } catch (IOException e) {
             e.printStackTrace();
         }

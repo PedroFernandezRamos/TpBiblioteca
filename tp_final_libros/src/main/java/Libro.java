@@ -10,7 +10,6 @@ public class Libro {
     private String lugarBiblioteca;
 
     public Libro(){
-
     }
 
     public Libro(String titulo, String autor, String isbn, Integer stockTotal, Integer stockDisponible, String lugarBiblioteca) {
@@ -68,6 +67,22 @@ public class Libro {
 
     public void setLugarBiblioteca(String lugarBiblioteca) {
         this.lugarBiblioteca = lugarBiblioteca;
+    }
+
+    public boolean EmpiezaPor(String inicio)
+    {
+        if(inicio.isEmpty()||inicio.length()>titulo.length())
+        {
+            return false;
+        }
+        for(int i = 0; i<inicio.length(); ++i)
+        {
+            if(inicio.charAt(1) != titulo.charAt(1))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

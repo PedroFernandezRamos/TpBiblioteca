@@ -3,15 +3,13 @@ public class Alquiler {
     private LocalDate fechaDeRetiro;
     private LocalDate fechaDeDevolucion;
     private boolean estado;
-    private String nombre;
-    private String isbn;
+    private Libro libro;
 
-    ///CONSTRUCTOR,GETTERS,SETTERS
-
-    public Alquiler(LocalDate fechaDeRetiro, LocalDate fechaDeDevolucion, boolean estado) {
+    public Alquiler(LocalDate fechaDeRetiro, LocalDate fechaDeDevolucion, boolean estado, Libro libro) {
         this.fechaDeRetiro = fechaDeRetiro;
         this.fechaDeDevolucion = fechaDeDevolucion;
         this.estado = estado;
+        this.libro = libro;
     }
 
     public LocalDate getFechaDeRetiro() {
@@ -38,5 +36,11 @@ public class Alquiler {
         this.estado = estado;
     }
 
-    ///METODOS
+    public Libro getLibro() {
+        return libro;
+    }
+
+    public void setLibro(Libro libro) {
+        this.libro = libro;
+    }
 }
