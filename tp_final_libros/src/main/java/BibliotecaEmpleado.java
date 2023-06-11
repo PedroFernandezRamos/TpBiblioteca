@@ -40,7 +40,9 @@ public class BibliotecaEmpleado extends Biblioteca{
                     case (0):
                         return;
                     case (1):
-                        ///alquiler();
+                        Cliente cliente = buscarPorDni(38445032);
+                        Libro libro = buscarPorIsbn("9788497936606");
+                        alquiler(cliente,libro);
                         break;
                     case (2):
                         //funcion devolucion
@@ -152,9 +154,10 @@ public class BibliotecaEmpleado extends Biblioteca{
 
     ///RECIBO CLIENTE Y LIBRO, RETORNO TRUE SI PUEDO HACER EL ALQUILER, RETORNO FALSE SI NO PUEDO HACER EL ALQUILER PORQUE ESTA EN LIMITE DE ALQUILERES
     public boolean alquiler(Cliente cliente, Libro libro) {
-        if(cliente.getListaAlquileresActuales().get(2).isEmpty())
+        ArrayList<String> alquileresString = new ArrayList<>(cliente.getListaAlquileresActuales());
+        if(alquileresString.size() < 3)
         {
-            alquileres.add(new Alquiler(LocalDate.now(),LocalDate.now().plusDays(7),false,libro));
+            alquileres.add(new Alquiler(LocalDate.now().toString(),LocalDate.now().plusDays(7).toString(),true,libro));
             actualizarJsonAlquileres(alquileres);
             cliente.agregarLibroListaAlquileresActuales(libro.getTitulo());
             return true;
@@ -165,13 +168,22 @@ public class BibliotecaEmpleado extends Biblioteca{
 
     ///RECIBO UN ISBN Y RETORNO LIBRO O NULL
     public Libro buscarPorIsbn(String isbn) {
-        for (Libro libro: libros){
-            if(libro.getTitulo().equals(isbn)){
+        for(Libro libro: libros){
+            if(libro.getIsbn().equals(isbn)){
                 return libro;
             }
         }
         return null;
     }
+
+    ///RECIBO DNI Y RETORNO CLIENTE O NULL
+    public Cliente buscarPorDni(Integer dni){
+        for(Cliente cliente: clientes){
+            if(cliente.getDni().equals(dni));
+                return cliente;
+            }
+        return null;
+        }
 
 }
 

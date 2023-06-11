@@ -11,6 +11,8 @@ public abstract class Persona {
         this.dni = dni;
     }
 
+    public Persona(){}
+
     public String getNombre() {
         return nombre;
     }

@@ -14,5 +14,13 @@
     "dni":40243712,
     "email":"mariacisneros@gmail.com",
     "contrasena":"mariaCisneros2000"
+  },
+  {
+    "nombre":"test",
+    "telefono":"1",
+    "direccion":"1",
+    "dni":1,
+    "email":"user",
+    "contrasena":"pass"
   }
 ]

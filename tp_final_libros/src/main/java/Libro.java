@@ -69,6 +69,15 @@ public class Libro {
         this.lugarBiblioteca = lugarBiblioteca;
     }
 
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", isbn='" + isbn + '\'';
+    }
+
+
     public boolean EmpiezaPor(String inicio)
     {
         if(inicio.isEmpty()||inicio.length()>titulo.length())

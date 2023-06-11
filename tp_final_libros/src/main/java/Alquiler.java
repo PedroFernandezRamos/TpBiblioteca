@@ -1,31 +1,33 @@
-import java.time.LocalDate;
 public class Alquiler {
-    private LocalDate fechaDeRetiro;
-    private LocalDate fechaDeDevolucion;
+    private String fechaDeRetiro;
+    private String fechaDeDevolucion;
     private boolean estado;
     private Libro libro;
 
-    public Alquiler(LocalDate fechaDeRetiro, LocalDate fechaDeDevolucion, boolean estado, Libro libro) {
-        this.fechaDeRetiro = fechaDeRetiro;
-        this.fechaDeDevolucion = fechaDeDevolucion;
+    public Alquiler(String  fechaDeRetiro, String  fechaDeDevolucion, boolean estado, Libro libro) {
+        this.fechaDeRetiro = fechaDeRetiro.toString();
+        this.fechaDeDevolucion = fechaDeDevolucion.toString();
         this.estado = estado;
         this.libro = libro;
     }
 
-    public LocalDate getFechaDeRetiro() {
+    public Alquiler(){
+    }
+
+    public String getFechaDeRetiro() {
         return fechaDeRetiro;
     }
 
-    public void setFechaDeRetiro(LocalDate fechaDeRetiro) {
+    public void setFechaDeRetiro(String fechaDeRetiro) {
         this.fechaDeRetiro = fechaDeRetiro;
     }
 
-    public LocalDate getFechaDeDevolucion() {
+    public String getFechaDeDevolucion() {
         return fechaDeDevolucion;
     }
 
-    public void setFechaDeDevolucion(LocalDate fechaDeDevolucion) {
-        this.fechaDeDevolucion = fechaDeDevolucion;
+    public void setFechaDeDevolucion(String fechaDeDevolucion) {
+        this.fechaDeDevolucion = fechaDeDevolucion.toString();
     }
 
     public boolean isEstado() {

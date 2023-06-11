@@ -8,6 +8,8 @@ public class Empleado extends Persona{
         this.contrasena = contrasena;
     }
 
+    public Empleado(){}
+
     public String getEmail() {
         return email;
     }

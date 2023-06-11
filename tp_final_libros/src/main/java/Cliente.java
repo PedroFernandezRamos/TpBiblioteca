@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +10,8 @@ public class Cliente extends Persona{
         listaAlquileresActuales = new ArrayList<>();
         CANT_CLIENTES ++;
     }
+
+    public Cliente(){}
 
     public Cliente(String nombre, String telefono, String direccion, Integer dni, List<String> listaAlquileresActuales) {
         super(nombre, telefono, direccion, dni);
