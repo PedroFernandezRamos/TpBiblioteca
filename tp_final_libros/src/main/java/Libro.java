@@ -1,10 +1,8 @@
-
-<<<<<<< HEAD
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)//Jackson ignorará cualquier campo no reconocido en el JSON durante la deserialización.
-=======
->>>>>>> 416b0adb94de598c99249f874411b47a45839323
+
 public class Libro {
     private String titulo;
     private String autor;
