@@ -1,5 +1,7 @@
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.Objects;
+
 @JsonIgnoreProperties(ignoreUnknown = true)//Jackson ignorará cualquier campo no reconocido en el JSON durante la deserialización.
 public class Libro {
     private String titulo;
@@ -77,6 +79,17 @@ public class Libro {
                 ", isbn='" + isbn + '\'';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Libro libro)) return false;
+        return Objects.equals(isbn, libro.isbn);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(isbn);
+    }
 
     public boolean EmpiezaPor(String inicio)
     {

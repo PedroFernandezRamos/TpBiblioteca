@@ -4,10 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class BibliotecaEmpleado extends Biblioteca{
     private ArrayList<Cliente> clientes = new ArrayList<>();
@@ -40,24 +37,22 @@ public class BibliotecaEmpleado extends Biblioteca{
                     case (0):
                         return;
                     case (1):
-                        Cliente cliente = buscarPorDni(38445032);
-                        Libro libro = buscarPorIsbn("9788497936606");
-                        alquiler(cliente,libro);
+                        ///alquilar(cliente,libro);                                             LISTO
                         break;
                     case (2):
-                        //funcion devolucion
+                        ///devolucion(libro, cliente)                                           LISTO
                         break;
                     case (3):
                         //funcion cargar nuevo libro
                         break;
                     case (4):
-                        cargarCliente();
+                        ///cargaClienteEnJson(nombre, telefono, direccion, dni);                LISTO
                         break;
                     case (5):
-                        //funcion verInfoCliente
+                        ///Cliente buscado = buscarPorDni(dni);                                 LISTO
                         break;
                     case(6):
-                        ///funcion ver devoluciones pendientes
+                        ///ArrayList<Alquiler> pendientes= devolucionesPendientes();            LISTO
                     default:
                         System.out.println("Opcion no valida, vuelva a ingresarla");
                         break;
@@ -66,6 +61,8 @@ public class BibliotecaEmpleado extends Biblioteca{
         }while (flag != false);
     }
 
+
+    ///METODOS SOLO PARA BACKEND
     private void leerJsonAlquileres(){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -74,7 +71,7 @@ public class BibliotecaEmpleado extends Biblioteca{
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    } ///LEE EL JSON ALQUILERES Y LO PONE EN UN ARRAYLIST
 
     private void actualizarJsonAlquileres(ArrayList<Alquiler> alquileres){
         ObjectMapper objectMapper = new ObjectMapper();
@@ -86,8 +83,7 @@ public class BibliotecaEmpleado extends Biblioteca{
         }catch (IOException e){
             e.printStackTrace();
         }
-
-    }
+    } ///ACTUALIZA LA LISTA EN EL JSON
 
     private void leerJsonClientes(){
         ObjectMapper objectMapper = new ObjectMapper();
@@ -97,28 +93,7 @@ public class BibliotecaEmpleado extends Biblioteca{
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-
-    private boolean cargaClienteEnJson(String nombre, String telefono, String direccion, Integer dni){
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            Cliente nuevoCliente = new Cliente(nombre,telefono,direccion,dni);
-
-            clientes.add(nuevoCliente);
-            String jsonActualizado = objectMapper.writeValueAsString(clientes);
-
-            FileWriter fileWriter = new FileWriter("src/main/resources/clientes.json");
-            fileWriter.write(jsonActualizado);
-            fileWriter.close();
-
-            System.out.println("Nuevo Cliente cargado con exito");
-            return true;
-        }catch (IOException e){
-            e.printStackTrace();
-            return false;
-        }
-    }
+    } ///LEE JSON CLIENTES Y LO PONE EN UN ARRAYLIST
 
     private boolean cargarCliente(){
 
@@ -150,14 +125,72 @@ public class BibliotecaEmpleado extends Biblioteca{
         }while (opcion != 1);
 
         return false;
+    } ///FUNCION DE PRUEBA PARA LA CARGA DE CLIENTES
+
+    private boolean existeCliente(Integer dni){
+        for(Cliente cliente:clientes){
+            if(cliente.getDni().equals(dni)){
+                return true;
+            }
+        }
+        return false;
+    } ///RECIBE DNI Y SE FIJA SI EXISTE CLIENTE
+
+    private boolean existeLibro(String isbn){
+        for(Libro libro:libros){
+            if(libro.getIsbn().equals(isbn)){
+                return true;
+            }
+        }
+        return false;
+    } ///RECIBE ISBN Y SE FIJA SI EXISTE LIBRO
+
+    private int buscarAlquiler(Libro libro,Cliente cliente){
+        for(Alquiler alquiler:alquileres){
+            if(alquiler.getLibro().equals(libro));
+            {
+                if(alquiler.getCliente().equals(cliente)){
+                    return alquileres.indexOf(alquiler);
+                }
+            }
+        }
+        return -1;
+    } ///DEVUELVE EL INDICE DEL ALQUILER O -1 SI NO ESTA
+
+
+
+    //METODOS PARA EL FRONTEND
+
+    ///RECIBO NOMBRE, TELEFONO, DIRECCION Y DNI Y CREO UN CLIENTE Y RETORNO TRUE Y LO CARGO EN EL ARRGLO DE CLIENTES Y LO PERSISTO EN EL JASON, RETORNO FALSE SI YA EXISTE EL CLEINTE O SI SALTA EXCEPCION
+    public boolean cargaClienteEnJson(String nombre, String telefono, String direccion, Integer dni){
+        if (!existeCliente(dni)){
+            try {
+                ObjectMapper objectMapper = new ObjectMapper();
+                Cliente nuevoCliente = new Cliente(nombre,telefono,direccion,dni);
+
+                clientes.add(nuevoCliente);
+                String jsonActualizado = objectMapper.writeValueAsString(clientes);
+
+                FileWriter fileWriter = new FileWriter("src/main/resources/clientes.json");
+                fileWriter.write(jsonActualizado);
+                fileWriter.close();
+
+                return true;
+            }catch (IOException e){
+                e.printStackTrace();
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 
     ///RECIBO CLIENTE Y LIBRO, RETORNO TRUE SI PUEDO HACER EL ALQUILER, RETORNO FALSE SI NO PUEDO HACER EL ALQUILER PORQUE ESTA EN LIMITE DE ALQUILERES
-    public boolean alquiler(Cliente cliente, Libro libro) {
+    public boolean alquilar(Cliente cliente, Libro libro) {
         ArrayList<String> alquileresString = new ArrayList<>(cliente.getListaAlquileresActuales());
         if(alquileresString.size() < 3)
         {
-            alquileres.add(new Alquiler(LocalDate.now().toString(),LocalDate.now().plusDays(7).toString(),true,libro));
+            alquileres.add(new Alquiler(LocalDate.now().toString(),LocalDate.now().plusDays(7).toString(),true,libro,cliente));
             actualizarJsonAlquileres(alquileres);
             cliente.agregarLibroListaAlquileresActuales(libro.getTitulo());
             return true;
@@ -183,8 +216,34 @@ public class BibliotecaEmpleado extends Biblioteca{
                 return cliente;
             }
         return null;
-        }
+    }
 
+    ///RECIBO UN CLIENTE Y EL LIBRO QUE QUIERE DEVOLVER EL CLIENTE Y RETORNO TRUE SI SE HACE CON EXITO O FALSE SI NO SE ENCUENTRA EL ALQUILER
+    public boolean devolucion(Libro libro, Cliente cliente){
+        String titulo = libro.getTitulo();
+        if(cliente.getListaAlquileresActuales().contains(titulo)){
+            cliente.getListaAlquileresActuales().remove(titulo);
+            int aDevolver = buscarAlquiler(libro,cliente);
+            if(aDevolver != -1)
+            {
+                alquileres.get(aDevolver).setEstado(false);
+            }
+            actualizarJsonAlquileres(alquileres);
+            return true;
+        }
+        return false;
+    }
+
+    ///DEVUELVE UN ARRAYLIST CON LAS DEVOLUCIONES PENDIENTES
+    public ArrayList<Alquiler> devolucionesPendientes(){
+        ArrayList<Alquiler> pendientes = new ArrayList<>();
+        for(Alquiler alquiler: alquileres){
+            if(!(alquiler.isEstado())){
+                pendientes.add(alquiler);
+            }
+        }
+        return pendientes;
+    }
 }
 
 

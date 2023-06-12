@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Persona {
     private String nombre;
     private String telefono;
@@ -36,5 +38,17 @@ public abstract class Persona {
                 "\nDireccion: " + direccion +
                 "\nDni: " + dni +
                 "\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Persona persona)) return false;
+        return Objects.equals(dni, persona.dni);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dni);
     }
 }
