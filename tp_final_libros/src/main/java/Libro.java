@@ -1,25 +1,37 @@
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+<<<<<<< HEAD
 import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)//Jackson ignorará cualquier campo no reconocido en el JSON durante la deserialización.
+=======
+>>>>>>> 416b0adb94de598c99249f874411b47a45839323
 public class Libro {
     private String titulo;
     private String autor;
-    private String isbn;
+    private Long isbn;
     private Integer stockTotal;
     private Integer stockDisponible;
+    private String genero;
+    private int numPaginas;
+    private String anioPublicacion;
+    private String sinopsis;
     private String lugarBiblioteca;
 
+
     public Libro(){
+
     }
 
-    public Libro(String titulo, String autor, String isbn, Integer stockTotal, Integer stockDisponible, String lugarBiblioteca) {
+    public Libro(String titulo, String autor, Long isbn, Integer stockTotal, Integer stockDisponible, String genero, int numPaginas, String anioPublicacion, String sinopsis, String lugarBiblioteca) {
         this.titulo = titulo;
         this.autor = autor;
         this.isbn = isbn;
         this.stockTotal = stockTotal;
         this.stockDisponible = stockDisponible;
+        this.genero = genero;
+        this.numPaginas = numPaginas;
+        this.anioPublicacion = anioPublicacion;
+        this.sinopsis = sinopsis;
         this.lugarBiblioteca = lugarBiblioteca;
     }
 
@@ -39,11 +51,11 @@ public class Libro {
         this.autor = autor;
     }
 
-    public String getIsbn() {
+    public Long getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(Long isbn) {
         this.isbn = isbn;
     }
 
@@ -61,6 +73,38 @@ public class Libro {
 
     public void setStockDisponible(Integer stockDisponible) {
         this.stockDisponible = stockDisponible;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public int getNumPaginas() {
+        return numPaginas;
+    }
+
+    public void setNumPaginas(int numPaginas) {
+        this.numPaginas = numPaginas;
+    }
+
+    public String getAnioPublicacion() {
+        return anioPublicacion;
+    }
+
+    public void setAnioPublicacion(String anioPublicacion) {
+        this.anioPublicacion = anioPublicacion;
+    }
+
+    public String getSinopsis() {
+        return sinopsis;
+    }
+
+    public void setSinopsis(String sinopsis) {
+        this.sinopsis = sinopsis;
     }
 
     public String getLugarBiblioteca() {
