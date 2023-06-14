@@ -4,9 +4,12 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-public class BibliotecaEmpleado extends Biblioteca{
+import static java.time.LocalDate.*;
+
+public class BibliotecaEmpleado extends Biblioteca {
     private ArrayList<Cliente> clientes = new ArrayList<>();
     private ArrayList<Alquiler> alquileres = new ArrayList<>();
 
@@ -19,9 +22,7 @@ public class BibliotecaEmpleado extends Biblioteca{
     @Override
     public void menu() {
         int opcion = -1;
-        boolean flag;
         do {
-            flag = true;
         System.out.println("Seleccione Una Opcion:");
         System.out.println("1. Alquiler");
         System.out.println("2. Devolucion");
@@ -29,6 +30,7 @@ public class BibliotecaEmpleado extends Biblioteca{
         System.out.println("4. Cargar nuevo cliente");
         System.out.println("5. Ver informacion de un cliente");
         System.out.println("6. Ver devoluciones pendientes");
+        System.out.println("7. Ver devoluciones pendientes vencidas");
         System.out.println("0. Volver al menu principal");
             Scanner sc = new Scanner(System.in);
             do {
@@ -54,12 +56,16 @@ public class BibliotecaEmpleado extends Biblioteca{
                         break;
                     case(6):
                         ///ArrayList<Alquiler> pendientes= devolucionesPendientes();            LISTO
+                        break;
+                    case(7):
+                        ///ArrayList<Alquiler> pendientesVencidas= devolucionesPendientesVencidas();            LISTO
+                        break;
                     default:
                         System.out.println("Opcion no valida, vuelva a ingresarla");
                         break;
                 }
             } while (opcion < 0 || opcion > 6);
-        }while (flag != false);
+        }while (true);
     }
 
 
@@ -146,7 +152,7 @@ public class BibliotecaEmpleado extends Biblioteca{
         return false;
     } ///RECIBE ISBN Y SE FIJA SI EXISTE LIBRO
 
-    private int buscarAlquiler(Libro libro,Cliente cliente){
+    private int buscarAlquiler(Libro libro, Cliente cliente){
         for(Alquiler alquiler:alquileres){
             if(alquiler.getLibro().equals(libro));
             {
@@ -191,7 +197,7 @@ public class BibliotecaEmpleado extends Biblioteca{
         ArrayList<String> alquileresString = new ArrayList<>(cliente.getListaAlquileresActuales());
         if(alquileresString.size() < 3)
         {
-            alquileres.add(new Alquiler(LocalDate.now().toString(),LocalDate.now().plusDays(7).toString(),true,libro,cliente));
+            alquileres.add(new Alquiler(now().toString(), now().plusDays(7).toString(),true,libro,cliente));
             actualizarJsonAlquileres(alquileres);
             cliente.agregarLibroListaAlquileresActuales(libro.getTitulo());
             return true;
@@ -244,6 +250,18 @@ public class BibliotecaEmpleado extends Biblioteca{
             }
         }
         return pendientes;
+    }
+
+    public ArrayList<Alquiler> devolucionesPendientesVencidas(){
+        ArrayList<Alquiler> pendientesVencidas = new ArrayList<>();
+        ArrayList<Alquiler> pendientes = devolucionesPendientes();
+
+        for(Alquiler alquiler: pendientes){
+            if(parse(alquiler.getFechaDeDevolucion()).isAfter(now())){     ///SI LA FECHA DE DEVOLUCION ES MAYOR A LA FECHA ACTUAL ENTRA AL IF
+                pendientesVencidas.add(alquiler);
+            }
+        }
+        return pendientesVencidas;
     }
 }
 

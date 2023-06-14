@@ -1,5 +1,3 @@
-package org.example;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -51,6 +49,7 @@ public class PanelPrincipal extends JPanel
         remove(botonUsuario);
         remove(botonAdmin);
 
+        //ANTES DE MANDARTE AL MENU ADMIN HACER UNA VENTANA QUE PIDA EMAIL Y CONTRASEÑA Y ESTÉ CONECTADA CON LA FUNCION ingresoPorMail() DEL MAIN (lo podemos poner en otro lado)
         ventanaPadre.AnclarMenuSuperior();
 
         

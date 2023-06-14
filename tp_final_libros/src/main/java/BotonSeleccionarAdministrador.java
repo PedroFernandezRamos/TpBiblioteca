@@ -1,5 +1,4 @@
-package org.example;
-import org.example.PanelPrincipal;
+
 
 import javax.swing.*;
 import java.awt.*;

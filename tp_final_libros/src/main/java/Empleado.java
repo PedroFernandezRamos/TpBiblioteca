@@ -1,4 +1,6 @@
-public class Empleado extends Persona{
+
+
+public class Empleado extends Persona {
     private String email;
     private String contrasena;
 

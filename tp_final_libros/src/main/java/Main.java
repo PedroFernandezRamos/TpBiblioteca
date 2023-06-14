@@ -7,8 +7,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Main {
     public static void main(String[] args) {
+
+       VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
+
+       /*
         int opcion = -1;
-        boolean flag = true;
+
         System.out.println("Bienvenido!");
         do {
             System.out.println("Seleccione una opcion:");
@@ -20,7 +24,6 @@ public class Main {
                 opcion = sc.nextInt();
                 switch (opcion) {
                     case (0):
-                        flag = false;
                         return;
                     case (1):
                         if(ingresoPorEmail()){
@@ -37,13 +40,15 @@ public class Main {
                         break;
                 }
             } while (opcion < 0 || opcion > 2);
-        }while (flag != false);
+        }while (true);
+
+        */
     }
 
     public static boolean buscaEmpleadoEnJson(String email, String contrasena){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            Empleado [] arrayEmpleados = objectMapper.readValue(new File("src/main/resources/empleados.json"),Empleado[].class);
+            Empleado[] arrayEmpleados = objectMapper.readValue(new File("src/main/resources/empleados.json"), Empleado[].class);
 
             for (Empleado empleado : arrayEmpleados){
                 if(email.equals(empleado.getEmail()) && contrasena.equals(empleado.getContrasena())){

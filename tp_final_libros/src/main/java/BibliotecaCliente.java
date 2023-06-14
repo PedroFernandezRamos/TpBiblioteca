@@ -1,7 +1,6 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BibliotecaCliente extends Biblioteca{
+public class BibliotecaCliente extends Biblioteca {
     public BibliotecaCliente(){}
 
     @Override

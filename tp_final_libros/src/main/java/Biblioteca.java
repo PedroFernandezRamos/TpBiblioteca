@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public abstract class Biblioteca implements Menu{
+public abstract class Biblioteca implements Menu {
     protected ArrayList<Libro> libros = new ArrayList<>();
 
     public Biblioteca(){}

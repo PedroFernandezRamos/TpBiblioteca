@@ -1,7 +1,9 @@
+
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente extends Persona{
+public class Cliente extends Persona {
     private List<String> listaAlquileresActuales;
     private static int CANT_CLIENTES=0;
 
