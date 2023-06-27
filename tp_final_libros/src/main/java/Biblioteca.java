@@ -16,7 +16,7 @@ public abstract class Biblioteca {
     protected void leerJsonLibros(){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            Libro[] librosArray = objectMapper.readValue(new File("src/main/resources/libro.json"), Libro[].class);
+            Libro[] librosArray = objectMapper.readValue(new File("tp_final_libros/src/main/resources/libro.json"), Libro[].class);
             libros.addAll(Arrays.asList(librosArray));
         } catch (IOException e) {
             e.printStackTrace();

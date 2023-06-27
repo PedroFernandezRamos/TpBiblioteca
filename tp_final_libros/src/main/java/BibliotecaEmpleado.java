@@ -29,7 +29,7 @@ public class BibliotecaEmpleado extends Biblioteca {
     private void leerJsonAlquileres(){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            Alquiler[] alquileresArray = objectMapper.readValue(new File("src/main/resources/alquileres.json"), Alquiler[].class);
+            Alquiler[] alquileresArray = objectMapper.readValue(new File("tp_final_libros/src/main/resources/alquileres.json"), Alquiler[].class);
             alquileres.addAll(Arrays.asList(alquileresArray));
         } catch (IOException e) {
             e.printStackTrace();
@@ -40,7 +40,7 @@ public class BibliotecaEmpleado extends Biblioteca {
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         try {
             String jsonActualizado = objectMapper.writeValueAsString(alquileres);
-            FileWriter fileWriter = new FileWriter("src/main/resources/alquileres.json");
+            FileWriter fileWriter = new FileWriter("tp_final_libros/src/main/resources/alquileres.json");
             fileWriter.write(jsonActualizado);
             fileWriter.close();
         }catch (IOException e){
@@ -50,7 +50,7 @@ public class BibliotecaEmpleado extends Biblioteca {
     private void leerJsonClientes(){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            Cliente[] arrayClientes = objectMapper.readValue(new File("src/main/resources/clientes.json"), Cliente[].class);
+            Cliente[] arrayClientes = objectMapper.readValue(new File("tp_final_libros/src/main/resources/clientes.json"), Cliente[].class);
             clientes.addAll(Arrays.asList(arrayClientes));
         } catch (IOException e) {
             e.printStackTrace();
@@ -83,7 +83,7 @@ public class BibliotecaEmpleado extends Biblioteca {
                 clientes.add(cliente);
                 String jsonActualizado = objectMapper.writeValueAsString(clientes);
 
-                FileWriter fileWriter = new FileWriter("src/main/resources/clientes.json");
+                FileWriter fileWriter = new FileWriter("tp_final_libros/src/main/resources/clientes.json");
                 fileWriter.write(jsonActualizado);
                 fileWriter.close();
 
@@ -157,7 +157,7 @@ public class BibliotecaEmpleado extends Biblioteca {
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         String jsonLibros = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(libros);
 
-        File outputFile = new File("src/main/resources/libro.json");
+        File outputFile = new File("tp_final_libros/src/main/resources/libro.json");
         FileUtils.writeStringToFile(outputFile, jsonLibros, Charset.defaultCharset());
 
     }
@@ -168,7 +168,7 @@ public class BibliotecaEmpleado extends Biblioteca {
 
                 String jsonActualizado = objectMapper.writeValueAsString(clientes);
 
-                FileWriter fileWriter = new FileWriter("src/main/resources/clientes.json");
+                FileWriter fileWriter = new FileWriter("tp_final_libros/src/main/resources/clientes.json");
                 fileWriter.write(jsonActualizado);
                 fileWriter.close();
 
