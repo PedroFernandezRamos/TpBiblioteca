@@ -4,21 +4,23 @@ import java.awt.event.ActionListener;
 
 public class MenuSuperior extends JMenuBar implements ActionListener
 {
+    ///ATRIBUTOS
+    FabricaFormularios formularios;
     JMenu menuLibros;
     JMenu menuClientes;
     JMenu menuAlquileres;
-
-
     JMenuItem agregarLibro;
     JMenuItem buscarLibro;
     JMenuItem agregarCliente;
     JMenuItem buscarCliente;
     JMenuItem nuevoAlquiler;
-    JMenuItem finalizarAlquiler;
+    //JMenuItem finalizarAlquiler;
     JMenuItem listarAlquileres;
 
-    MenuSuperior()
-    {
+    ///CONSTRUCTOR
+    MenuSuperior(FabricaFormularios formularios) {
+        this.formularios = formularios;
+
         menuLibros = new JMenu("Libros");
         menuClientes = new JMenu("Clientes");
         menuAlquileres = new JMenu("Alquileres");
@@ -28,7 +30,7 @@ public class MenuSuperior extends JMenuBar implements ActionListener
         agregarCliente = new JMenuItem("Agregar Cliente");
         buscarCliente = new JMenuItem("Buscar Cliente");
         nuevoAlquiler = new JMenuItem("Nuevo Alquiler");
-        finalizarAlquiler = new JMenuItem("Finalizar Alquiler");
+        //finalizarAlquiler = new JMenuItem("Finalizar Alquiler");
         listarAlquileres = new JMenuItem("Listar Alquileres");
 
         menuLibros.add(agregarLibro);
@@ -38,7 +40,7 @@ public class MenuSuperior extends JMenuBar implements ActionListener
         menuClientes.add(buscarCliente);
 
         menuAlquileres.add(nuevoAlquiler);
-        menuAlquileres.add(finalizarAlquiler);
+        //menuAlquileres.add(finalizarAlquiler);
         menuAlquileres.add(listarAlquileres);
 
         add(menuLibros);
@@ -50,48 +52,40 @@ public class MenuSuperior extends JMenuBar implements ActionListener
         agregarCliente.addActionListener(this);
         buscarCliente.addActionListener(this);
         nuevoAlquiler.addActionListener(this);
-        finalizarAlquiler.addActionListener(this);
+        //finalizarAlquiler.addActionListener(this);
         listarAlquileres.addActionListener(this);
 
     }
 
-
-
+    ///METODOS
     @Override
-    public void actionPerformed(ActionEvent e)
-    {
+    public void actionPerformed(ActionEvent e) {
         JMenuItem source = (JMenuItem) e.getSource();
         String opcionSeleccionada = source.getText();
 
         if(opcionSeleccionada.equals("Agregar Libro"))
         {
-            System.out.println("agregar libro");
-            Formulario formularioAgregarLibro = FabricaFormularios.CrearFormularioAgregarLibro();
-           // Formulario prueba = new Formulario("Agregar Libro", 500, 500);
+            formularios.CrearFormularioAgregarLibro();
         }
         else if (opcionSeleccionada.equals("Buscar Libro"))
         {
-            System.out.println("Buscar Libro");
+            formularios.crearBuscadorLibro();
         }
         else if (opcionSeleccionada.equals("Agregar Cliente"))
         {
-
+            formularios.AgregarCliente();
         }
         else if (opcionSeleccionada.equals("Buscar Cliente"))
         {
-
+            formularios.BuscarCliente();
         }
         else if (opcionSeleccionada.equals("Nuevo Alquiler"))
         {
-
-        }
-        else if (opcionSeleccionada.equals("Finalizar Alquiler"))
-        {
-
+            formularios.NuevoAlquiler();
         }
         else if (opcionSeleccionada.equals("Listar Alquileres"))
         {
-
+            formularios.MostrarAlquileres();
         }
     }
 }

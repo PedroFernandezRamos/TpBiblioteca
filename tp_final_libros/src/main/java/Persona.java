@@ -1,36 +1,34 @@
 import java.util.Objects;
 
 public abstract class Persona {
+    ///ATRIBUTOS
     private String nombre;
     private String telefono;
     private String direccion;
-    private Integer dni;
+    private String dni;
 
-    public Persona(String nombre, String telefono, String direccion, Integer dni) {
+    ///CONSTRUCTORES
+    public Persona(String nombre, String telefono, String direccion, String dni) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.direccion = direccion;
         this.dni = dni;
     }
-
     public Persona(){}
 
+    ///METODOS
     public String getNombre() {
         return nombre;
     }
-
     public String getTelefono() {
         return telefono;
     }
-
     public String getDireccion() {
         return direccion;
     }
-
-    public Integer getDni() {
+    public String getDni() {
         return dni;
     }
-
     @Override
     public String toString() {
         return "\nNombre: " + nombre +

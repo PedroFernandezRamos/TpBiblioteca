@@ -1,12 +1,13 @@
 import javax.swing.*;
 
-public class Formulario extends JFrame
+public class VentanaFormulario extends JFrame
 {
+    ///ATRIBUTOS
     JPanel panel;
     JPanel panelSinopsis;
 
-    Formulario(String titulo, Integer ancho, Integer alto)
-    {
+    ///METODOS
+    VentanaFormulario(String titulo, Integer ancho, Integer alto) {
         panel = new JPanel();
         setSize(ancho, alto);
         setTitle(titulo);

@@ -1,14 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 
-
 public class VentanaPrincipal extends JFrame
 {
+    ///ATRIBUTOS
     PanelPrincipal panelPrincipal;
     MenuSuperior menuSuperior;
+    BibliotecaEmpleado biblioteca;
+    FabricaFormularios formularios;
 
-    public VentanaPrincipal()
-    {
+    ///CONSTRUCTOR
+    public VentanaPrincipal(BibliotecaEmpleado biblioteca, FabricaFormularios formularios) {
         panelPrincipal = new PanelPrincipal(this);
         add(panelPrincipal);
 
@@ -22,16 +24,14 @@ public class VentanaPrincipal extends JFrame
 
         setMinimumSize(new Dimension(700, 500));
 
-
+        this.biblioteca = biblioteca;
+        this.formularios = formularios;
         setVisible(true);
-
-
     }
 
-    public void AnclarMenuSuperior()
-    {
-        menuSuperior = new MenuSuperior();
+    ///METODOS
+    public void AnclarMenuSuperior() {
+        menuSuperior = new MenuSuperior(formularios);
         setJMenuBar(menuSuperior);
     }
-
 }
